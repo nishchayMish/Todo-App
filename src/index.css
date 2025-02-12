@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Flexbox layout for task items */
+.task-item {
+    width: 100%;
+}
+
+/* Responsive layout */
+@media (min-width: 768px) {
+    .task-item {
+        flex-direction: row;
+    }
+}
+
+/* Handle overflow for title and description */
+.task-content {
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.task-content h1,
+.task-content p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
